@@ -1,5 +1,5 @@
 function getBackend() {
-    return 'http://get.apassphrase.me/'
+    return 'https://get.apassphrase.me/'
 }
 
 async function getPassphrase() {
