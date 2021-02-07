@@ -1,1 +1,1 @@
-web: bin/emojiphrase-backend
+web: bin/passphrase-backend
