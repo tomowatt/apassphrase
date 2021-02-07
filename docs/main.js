@@ -1,5 +1,5 @@
 function getBackend() {
-    return 'https://get-passphrase.herokuapp.com/'
+    return 'http://get.apassphrase.me/'
 }
 
 async function getPassphrase() {
