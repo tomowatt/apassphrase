@@ -5,7 +5,8 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"passphrase"
+
+	"github.com/tomowatt/passphrase/passphrase"
 )
 
 func main() {

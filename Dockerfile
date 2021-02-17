@@ -2,7 +2,7 @@ FROM golang:1.15-alpine as builder
 
 WORKDIR /build
 COPY . . 
-RUN GOPATH=$PWD CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o passphrase-backend .
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o passphrase-backend .
 
 FROM alpine:3.12
 

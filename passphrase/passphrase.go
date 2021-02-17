@@ -1,14 +1,15 @@
 package passphrase
 
 import (
-	"dictionary"
-	"emoji"
 	"encoding/json"
 	"log"
 	"math/rand"
 	"net/http"
 	"strings"
 	"time"
+
+	"github.com/tomowatt/passphrase/dictionary"
+	"github.com/tomowatt/passphrase/emoji"
 )
 
 type passphraseStruct struct {
