@@ -10,9 +10,10 @@ local-run: build
 docker-build:
 	docker build -t local/passphrase-backend .
 
-docker-run:
-	docker run -d -e $(LOCAL_ENV) -p 8080:8080 local/passphrase-backend
+docker-run: docker-build
+	docker run -d -e $(LOCAL_ENV) -p 8080:8080 --name local-passphrase-backend local/passphrase-backend
 
 clean:
 	rm -rf bin/passphrase-backend
+	docker rm -f local-passphrase-backend
 	docker rmi -f local/passphrase-backend
