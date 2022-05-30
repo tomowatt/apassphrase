@@ -11,7 +11,7 @@ local-run: build
 
 .PHONY: docker-build
 docker-build:
-	docker build -t local/passphrase-backend . --no-cache
+	docker build -t local/passphrase-backend --build-arg GO_BUILD_ENV="$(GO_BUILD_ENV)" . --no-cache
 
 .PHONY: docker-run
 docker-run: docker-build

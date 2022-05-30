@@ -1,8 +1,10 @@
-FROM golang:1.15-alpine as builder
+ARG GO_BUILD_ENV
+
+FROM golang:1.18-alpine as builder
 
 WORKDIR /build
-COPY . . 
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o passphrase-backend .
+COPY . .
+RUN $GO_BUILD_ENV go build -o passphrase-backend .
 
 FROM alpine:latest
 
