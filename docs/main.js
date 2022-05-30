@@ -1,5 +1,5 @@
 function getBackend() {
-    return 'https://api.apassphrase.me/'
+    return 'https://apassphrase.tomsfriendlyserver.party/'
 }
 
 async function getPassphrase() {
