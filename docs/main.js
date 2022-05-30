@@ -1,5 +1,5 @@
 function getBackend() {
-    return 'http://apassphrase.tomsfriendlyserver.party/'
+    return 'https://api-apassphrase.herokuapp.com/'
 }
 
 async function getPassphrase() {
