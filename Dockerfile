@@ -6,7 +6,7 @@ WORKDIR /build
 COPY . .
 RUN $GO_BUILD_ENV go build -o passphrase-backend .
 
-FROM alpine:3.18.3
+FROM alpine:3.18.6
 
 WORKDIR /app/
 COPY --from=builder /build/passphrase-backend .
